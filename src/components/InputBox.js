@@ -31,7 +31,7 @@ const InputBox = () => {
       for (let j = 0; j < words.length; j++) {
         let isTranslated = false;
         for (let i = 0; i < vowels.length; i++) {
-          if (words[j][0] === vowels[i]) {
+          if (words[j][0].toLowerCase() === vowels[i]) {
             translatedWord += words[j] + "yay ";
             isTranslated = true;
           } else {
