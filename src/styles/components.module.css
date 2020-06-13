@@ -1,0 +1,187 @@
+.input-box {
+  width: 50%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.input-box input {
+  flex-basis: 87%;
+  padding: 12px;
+  font-weight: var(--bold);
+  color: var(--primary-color);
+  font-size: 1.1em;
+  border-radius: 8px 0px 0px 8px;
+  border-width: 0;
+}
+
+.input-box input::-webkit-input-placeholder {
+  color: var(--light-text);
+}
+
+.input-box button {
+  flex-basis: 13%;
+  border-width: 0px;
+  background-color: var(--secondary-color);
+  border-radius: 0px 8px 8px 0px;
+  color: #fff;
+}
+
+.input-box button .lang-icon {
+  font-size: 1.8rem;
+}
+.input-box button:hover {
+  cursor: pointer;
+}
+
+.input-box button:focus,
+.input-box input:focus {
+  outline: none;
+}
+
+/* translated words */
+.translated-words {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.7em;
+}
+
+.word-card {
+  display: flex;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 1.5em;
+  animation: card-animation forwards 0.5s linear;
+}
+
+@keyframes card-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.word-card div {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.word-card .word-container span {
+  color: var(--light-text);
+  font-size: 0.6em;
+}
+
+.word-card .word-container h2 {
+  margin: 0;
+  align-self: center;
+  color: var(--primary-color);
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.word-card .translatedWord-container h2 {
+  margin: 0;
+  align-self: center;
+  color: var(--secondary-color);
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.word-card .arrow-icon {
+  flex-basis: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+}
+
+@media (max-width: 1250px) {
+  .input-box,
+  .translated-words {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .word-card .word-container h2,
+  .word-card .translatedWord-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .word-card .arrow-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .translated-words {
+    margin-top: 1.1em;
+  }
+
+  .word-card {
+    margin-top: 1em;
+  }
+
+  .input-box,
+  .translated-words {
+    width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  .translated-words {
+    margin-top: 0.9em;
+  }
+
+  .input-box,
+  .translated-words {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input-box,
+  .translated-words {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .input-box input {
+    font-size: 1em;
+  }
+
+  .input-box button .lang-icon {
+    font-size: 1.4rem;
+  }
+
+  .word-card .word-container h2,
+  .word-card .translatedWord-container h2 {
+    font-size: 1rem;
+  }
+
+  .word-card .arrow-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-box input,
+  .word-card .arrow-icon,
+  .word-card .word-container h2,
+  .word-card .translatedWord-container h2 {
+    font-size: 0.9rem;
+  }
+}

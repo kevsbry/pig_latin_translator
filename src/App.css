@@ -1,38 +1,136 @@
+:root {
+  --primary-color: #f469a9;
+  --secondary-color: #9e579d;
+  --light-text: #d5d5d5;
+  --history-color: #574b90;
+  --regular: 400;
+  --bold: 700;
+}
+
 .App {
-  text-align: center;
+  font-family: pt-sans, sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+  grid-column-start: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2.4rem;
+}
+
+.logo-container .icon {
+  font-size: 5.5rem;
+  color: var(--primary-color);
+}
+
+.logo-container h2 {
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  font-weight: var(--bold);
+}
+
+.link-container {
+  margin-top: 2em;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.history-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.link-container .history-link {
+  text-transform: uppercase;
+  color: var(--history-color);
+  font-weight: var(--bold);
+  font-size: 1.5em;
+}
+
+@media (max-width: 1650px) {
+  .App {
+    grid-template-columns: 1.5fr 6fr 1.5fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1450px) {
+  .App {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+}
+
+@media (max-width: 1250px) {
+  .history-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .history-container {
+    width: 75%;
+  }
+
+  .logo-container .icon {
+    font-size: 4rem;
+  }
+
+  .logo-container h2,
+  .link-container .history-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .history-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .history-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    grid-template-columns: 0.5fr 8fr 0.5fr;
+  }
+
+  .logo-container .icon {
+    font-size: 4rem;
+  }
+
+  .logo-container h2,
+  .link-container .history-link {
+    font-size: 1rem;
+  }
+
+  .link-container {
+    margin-bottom: 1.4em;
+  }
+}
+
+@media (max-width: 450px) {
+  .App {
+    grid-template-columns: 0.2fr 8fr 0.2fr;
+  }
+
+  .logo-container .icon {
+    font-size: 2.8rem;
+  }
+
+  .link-container .history-link {
+    font-size: 0.9rem;
   }
 }
